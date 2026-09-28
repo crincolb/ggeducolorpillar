@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GangGang Edu — Color Pillar</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root{
+  --black:#0A0A0B;
+  --pink:#FF1F8C;
+  --pink-soft:#FF7FC4;
+  --pink-deep:#B0125F;
+  --paper:#F6F1F0;
+  --ash:#9A9298;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:
+    radial-gradient(ellipse at top right, rgba(255,31,140,0.18), transparent 55%),
+    radial-gradient(ellipse at bottom left, rgba(255,31,140,0.08), transparent 50%),
+    var(--black);
+  color:var(--paper);
+  font-family:'Archivo', sans-serif;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:800px;margin:0 auto;padding:64px 24px 100px;}
+
+header{margin-bottom:56px;}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--pink-soft);display:flex;align-items:center;gap:10px;margin-bottom:18px;
+}
+.eyebrow::before{content:'';width:22px;height:1px;background:var(--pink-soft);}
+h1{
+  font-family:'Fraunces', serif;font-weight:700;font-size:clamp(38px,6.5vw,58px);
+  line-height:1.02;margin:0 0 18px;letter-spacing:-0.01em;
+}
+h1 em{font-style:italic;font-weight:500;color:var(--pink);}
+.dek{font-size:16.5px;line-height:1.65;color:#D8D0D4;max-width:560px;margin:0;}
+
+.stack{display:flex;flex-direction:column;gap:2px;border-radius:20px;overflow:hidden;border:1px solid rgba(246,241,240,0.14);}
+
+.row{
+  display:flex;align-items:center;gap:22px;
+  padding:26px 28px;
+  background:rgba(246,241,240,0.03);
+  text-decoration:none;color:inherit;
+  transition:background .18s ease, padding-left .18s ease;
+  position:relative;
+}
+.row:hover{background:rgba(255,31,140,0.1);padding-left:34px;}
+.row:not(:last-child){border-bottom:1px solid rgba(246,241,240,0.1);}
+
+.num{
+  font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ash);
+  flex:none;width:26px;
+}
+.swatch{
+  width:44px;height:44px;border-radius:11px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:var(--black);
+}
+.row-body{flex:1;min-width:0;}
+.row-title{font-family:'Fraunces',serif;font-size:21px;font-weight:600;line-height:1.2;}
+.row-title span{color:var(--pink-soft);font-weight:500;font-style:italic;}
+.row-sub{font-size:13.5px;color:var(--ash);margin-top:3px;line-height:1.5;}
+.arrow{
+  flex:none;font-size:20px;color:var(--pink-soft);
+  transition:transform .18s ease;
+}
+.row:hover .arrow{transform:translateX(4px);}
+
+.note{
+  margin-top:40px;font-size:13px;line-height:1.7;color:var(--ash);
+  font-family:'IBM Plex Mono',monospace;
+  border-left:2px solid rgba(255,31,140,0.4);padding-left:16px;
+}
+.note b{color:var(--pink-soft);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">GangGang Edu · Color Pillar</div>
+    <h1>Six ways to <em>learn color.</em></h1>
+    <p class="dek">Two games to build instinct, four drills to build precision. Run them in order for a full session, or jump straight to whichever skill the class needs that day.</p>
+  </header>
+
+  <div class="stack">
+    <a class="row" href="mixr.html">
+      <div class="num">00</div>
+      <div class="swatch" style="background:var(--pink);">M</div>
+      <div class="row-body">
+        <div class="row-title">Mixr <span>— match the line</span></div>
+        <div class="row-sub">Swipe client profiles onto the right Wella product line. Builds instinct before the drills get technical.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="row" href="undertone-drill.html">
+      <div class="num">01</div>
+      <div class="swatch" style="background:var(--pink-soft);">U</div>
+      <div class="row-body">
+        <div class="row-title">Undertone <span>— the color wheel</span></div>
+        <div class="row-sub">Read the underlying pigment at any level, and pick the neutralizing base that cancels it.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="row" href="ratio-drill.html">
+      <div class="num">02</div>
+      <div class="swatch" style="background:var(--pink-deep);">R</div>
+      <div class="row-body">
+        <div class="row-title">Ratio <span>— developer &amp; dilution</span></div>
+        <div class="row-sub">Koleston Perfect, Color Touch, Illumina, and Shinefinity — each line's real developer percentage and mixing ratio.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="row" href="code-drill.html">
+      <div class="num">03</div>
+      <div class="swatch" style="background:var(--pink);">C</div>
+      <div class="row-body">
+        <div class="row-title">Code <span>— Wella's numbering system</span></div>
+        <div class="row-sub">Decode level / tone notation and match a client request to its real Wella shade code.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="row" href="split-drill.html">
+      <div class="num">04</div>
+      <div class="swatch" style="background:var(--pink-deep);">S</div>
+      <div class="row-body">
+        <div class="row-title">Split <span>— formulating what's not on the shelf</span></div>
+        <div class="row-sub">No stock shade for the level you need? Blend two you do have, in the right weighted ratio, to land exactly there.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="row" href="pairs-drill.html">
+      <div class="num">05</div>
+      <div class="swatch" style="background:var(--pink-soft);">P</div>
+      <div class="row-body">
+        <div class="row-title">Pairs <span>— match the family to the number</span></div>
+        <div class="row-sub">A fast tap-to-match game: pair each Wella tone family with its number until it's automatic.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+
+  <p class="note">Built for classroom use — each activity keeps its own score and resets independently, so you can revisit any one of them mid-session without losing the others.</p>
+
+</div>
+</body>
+</html>
